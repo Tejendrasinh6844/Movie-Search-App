@@ -50,6 +50,13 @@ const Header = () => {
             }, 1000);
         }
     };
+    const SearchButtonHandler=()=>{
+        if(query.length > 0)
+        navigate(`/search/${query}`)
+        setTimeout(() => {
+            setShowSearch(false);
+        }, 1000);
+    }
 
     const openSearch = () => {
         setMobileMenu(false);
@@ -113,6 +120,7 @@ const Header = () => {
                                 onChange={(e) => setQuery(e.target.value)}
                                 onKeyUp={searchQueryHandler}
                             />
+                            <button onClick={SearchButtonHandler}>Search</button>
                             <VscChromeClose
                                 onClick={() => setShowSearch(false)}
                             />
