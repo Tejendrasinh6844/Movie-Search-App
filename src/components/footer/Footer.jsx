@@ -9,6 +9,7 @@ import {
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -17,7 +18,9 @@ const Footer = () => {
                 <ul className="menuItems">
                     <li className="menuItem">Terms Of Use</li>
                     <li className="menuItem">Privacy-Policy</li>
+                    <Link to={About}>
                     <li className="menuItem">About</li>
+                    </Link>
                     <li className="menuItem">Blog</li>
                     <li className="menuItem">FAQ</li>
                 </ul>
